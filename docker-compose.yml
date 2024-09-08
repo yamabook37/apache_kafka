@@ -1,0 +1,12 @@
+services:
+  iot:
+    build: .
+    working_dir: '/app/'
+    tty: true
+    volumes:
+      - ./opt:/app/opt
+
+networks:
+  default:
+    external: true
+    name: kafka_network
